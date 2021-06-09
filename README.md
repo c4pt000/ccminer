@@ -1,27 +1,15 @@
 # ccminer
 
 to build from source                                  
-#attention moves gcc as a build system back to fedora 28 and alot of the installed system that depends on gcc
-#best done from a docker image or KVM image otherwise,
-
-moves the installed build system back to fedora 28, (building with nvcc nvidia-compiler to match working gcc version that "nvcc" requires)
 ```
-if you have rpmfusion installed
-wget https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-28
+docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer fedora:28
+docker exec -it <docker_vm_sha256> bash
 
-mv RPM-GPG-KEY-rpmfusion-free-fedora-28 /etc/pki/rpm-gpg/
-dnf module --releasever=28 --setopt=module_platform_id=platform:f28 disable libgit2:0.26
-dnf module --releasever=28 --setopt=module_platform_id=platform:f28 enable libgit2:0.27
-
-some packages might have to be force removed if there are conflicts (use extreme caution)
-dnf install --releasever=28 --setopt=module_platform_id=platform:f28 gcc --allowerasing --best
 wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
 mv cuda-fedora33.repo /etc/yum.repos.d/
 yum install cuda nvidia-driver -y
 export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
-wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/34/Everything/x86_64/os/Packages/o/openssl-libs-1.1.1k-1.fc34.x86_64.rpm
-rpm -Uvh --force --nodeps openssl-libs-1.1.1k-1.fc34.x86_64.rpm
-dnf install --releasever=28 --setopt=module_platform_id=platform:f28 yum --allowerasing --best
+
 
 git clone https://github.com/c4pt000/ccminer
 cd ccminer
