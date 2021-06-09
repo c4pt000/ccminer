@@ -1,6 +1,6 @@
 # ccminer
 
-export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}   is part of PATH in /root/.bashrc
+ export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}   is part of PATH in /root/.bashrc
 
 
 to build from source                                  
