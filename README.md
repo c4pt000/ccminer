@@ -9,7 +9,7 @@ mkdir /opt/TMP-ccminer
 yum install libcurl-devel -y
 docker run -it -d -v /opt/TMP-ccminer:/opt/TMP-ccminer c4pt/ccminer-cuda-build-env
 docker exec -it <docker_vm_sha256> bash
-cd ccminer
+cd /opt/klaus-ccminer/ccminer
 sh build.sh
 ./ccminer                       # (mixture of fedora 28, fedora 34 libs)
 checkinstall --install=no --exclude=/sys/fs/selinux -D
