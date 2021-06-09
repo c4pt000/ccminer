@@ -9,7 +9,7 @@ moves the installed build system back to fedora 28,
 if you have rpmfusion installed
 wget https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-28
 mv RPM-GPG-KEY-rpmfusion-free-fedora-28 /etc/pki/rpm-gpg/
-dnf install --releasever=28 --setopt=module_platform_id=platform:f28 gcc --allowerasing
+dnf install --releasever=28 --setopt=module_platform_id=platform:f28 gcc --allowerasing --best
 
 ```
 
