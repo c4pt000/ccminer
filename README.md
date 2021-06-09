@@ -3,7 +3,7 @@
 to build from source                                  
 ```
 mkdir /opt/TMP-ccminer
-docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer c4pt/ccminer-cuda-build-env
+docker run -it -d -v /opt/TMP-ccminer:/opt/TMP-ccminer c4pt/ccminer-cuda-build-env
 docker exec -it <docker_vm_sha256> bash
 export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
 cd ccminer
