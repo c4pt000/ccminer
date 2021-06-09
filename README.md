@@ -52,11 +52,3 @@ To rebuild them, you need to clone this repository and its submodules :
     git clone https://github.com/peters/curl-for-windows.git compat/curl-for-windows
 
 
-Compile on Linux
-----------------
-```
- dnf module list libgit2
- dnf module disable libgit2
-```
-
-Please see [INSTALL](https://github.com/tpruvot/ccminer/blob/linux/INSTALL) file or [project Wiki](https://github.com/tpruvot/ccminer/wiki/Compatibility)
