@@ -20,6 +20,8 @@ cd /opt/TMP-ccminer
 yum install ccminer
 
 
+https://github.com/KlausT/ccminer
+
 ```
 
 
