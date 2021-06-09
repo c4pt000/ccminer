@@ -14,6 +14,16 @@ dnf module --releasever=28 --setopt=module_platform_id=platform:f28 enable libgi
 
 
 dnf install --releasever=28 --setopt=module_platform_id=platform:f28 gcc --allowerasing --best
+wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
+mv cuda-fedora33.repo /etc/yum.repos.d/
+yum install cuda nvidia-driver -y
+export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
+git clone https://github.com/c4pt000/ccminer
+cd ccminer
+sh autogen.sh
+./configure --prefix=/usr
+make -j24
+make -j24 install
 
 ```
 
