@@ -4,7 +4,7 @@ to build from source
 #attention moves gcc as a build system back to fedora 28 and alot of the installed system that depends on gcc
 #best done from a docker image or KVM image otherwise,
 
-moves the installed build system back to fedora 28,
+moves the installed build system back to fedora 28, (building with nvcc nvidia-compiler to match working gcc version that "nvcc" requires)
 ```
 if you have rpmfusion installed
 wget https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-28
