@@ -8,6 +8,7 @@ docker exec -it <docker_vm_sha256> bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
 mv cuda-fedora33.repo /etc/yum.repos.d/
 yum install cuda nvidia-driver -y
+yum groupinstall "C Development Tools and Libraries" -y
 export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
 
 
