@@ -11,6 +11,8 @@ docker exec -it <docker_vm_sha256> bash
 cd ccminer
 make -j24 clean
 sh build.sh
+./ccminer
+checkinstall --install=no --exclude=/sys/fs/selinux -D
 
 
 ```
