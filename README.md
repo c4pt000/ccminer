@@ -1,5 +1,18 @@
 # ccminer
 
+to build from source                                  
+#attention moves gcc as a build system back to fedora 28 and alot of the installed system that depends on gcc
+#best done from a docker image or KVM image otherwise,
+
+moves the installed build system back to fedora 28,
+```
+if you have rpmfusion installed
+wget https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-28
+mv RPM-GPG-KEY-rpmfusion-free-fedora-28 /etc/pki/rpm-gpg/
+dnf install --releasever=28 --setopt=module_platform_id=platform:f28 gcc --allowerasing
+
+```
+
 Based on Christian Buchner's &amp; Christian H.'s CUDA project, no more active on github since 2014.
 
 Check the [README.txt](README.txt) for the additions
