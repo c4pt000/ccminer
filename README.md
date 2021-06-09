@@ -21,6 +21,7 @@ yum install cuda nvidia-driver -y
 export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
 wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/34/Everything/x86_64/os/Packages/o/openssl-libs-1.1.1k-1.fc34.x86_64.rpm
 rpm -Uvh --force --nodeps openssl-libs-1.1.1k-1.fc34.x86_64.rpm
+dnf install --releasever=28 --setopt=module_platform_id=platform:f28 yum --allowerasing --best
 
 git clone https://github.com/c4pt000/ccminer
 cd ccminer
