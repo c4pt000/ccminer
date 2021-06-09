@@ -2,6 +2,7 @@
 
 to build from source                                  
 ```
+mkdir /opt/TMP-ccminer
 docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer fedora:28
 docker exec -it <docker_vm_sha256> bash
 
