@@ -13,6 +13,7 @@ make -j24 clean
 sh build.sh
 ./ccminer
 checkinstall --install=no --exclude=/sys/fs/selinux -D
+alien --scripts --to-rpm ccminer*.deb
 
 
 ```
