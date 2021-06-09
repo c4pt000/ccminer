@@ -12,7 +12,7 @@ mv RPM-GPG-KEY-rpmfusion-free-fedora-28 /etc/pki/rpm-gpg/
 dnf module --releasever=28 --setopt=module_platform_id=platform:f28 disable libgit2:0.26
 dnf module --releasever=28 --setopt=module_platform_id=platform:f28 enable libgit2:0.27
 
-
+some packages might have to be force removed if there are conflicts (use extreme caution)
 dnf install --releasever=28 --setopt=module_platform_id=platform:f28 gcc --allowerasing --best
 wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
 mv cuda-fedora33.repo /etc/yum.repos.d/
