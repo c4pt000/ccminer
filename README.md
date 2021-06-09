@@ -3,22 +3,13 @@
 to build from source                                  
 ```
 mkdir /opt/TMP-ccminer
-docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer fedora:34
+docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer c4pt/ccminer-cuda-build-env
 docker exec -it <docker_vm_sha256> bash
-
-wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
-mv cuda-fedora33.repo /etc/yum.repos.d/
-yum install cuda nvidia-driver -y
-yum groupinstall "C Development Tools and Libraries" -y
 export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
-
-
-git clone https://github.com/c4pt000/ccminer
 cd ccminer
-sh autogen.sh
-./configure --prefix=/usr
-make -j24
-make -j24 install
+make -j24 clean
+sh build.sh
+
 
 ```
 
