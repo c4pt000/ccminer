@@ -3,7 +3,7 @@
 to build from source                                  
 ```
 mkdir /opt/TMP-ccminer
-docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer fedora:28
+docker run -it -d /opt/TMP-ccminer:/opt/TMP-ccminer fedora:34
 docker exec -it <docker_vm_sha256> bash
 
 wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
