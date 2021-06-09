@@ -1,0 +1,20 @@
+{
+	"_comment1" : "Possible keys are the long options (ccminer --help)",
+	"_comment2" : "todo: support /* comments */",
+
+	"algo" : "scrypt",
+	"intensity": 13,
+
+	"api-bind": "0",
+	"statsavg": 20,
+
+	"max-log-rate": 60,
+	"quiet" : false,
+	"debug" : false,
+	"protocol" : false,
+	"cpu-priority" : 3,
+
+	"url" : "stratum+tcp://104.237.145.126:9555",
+	"user" : "RNshKJXo CHANGE TO YOUR RECEIVING WALLET ADDRESS TQN",
+	"pass" : "anything"
+}
