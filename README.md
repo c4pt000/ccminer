@@ -11,7 +11,7 @@ docker exec -it <docker_vm_sha256> bash
 cd ccminer
 make -j24 clean
 sh build.sh
-./ccminer
+./ccminer (will only work in host when libcurl-devel is installed (mixture of fedora 28, fedora 34 libs)
 checkinstall --install=no --exclude=/sys/fs/selinux -D
 alien --scripts --to-rpm ccminer*.deb
 
