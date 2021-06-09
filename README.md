@@ -8,8 +8,7 @@ moves the installed build system back to fedora 28, (building with nvcc nvidia-c
 ```
 if you have rpmfusion installed
 wget https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-28
-wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/34/Everything/x86_64/os/Packages/o/openssl-libs-1.1.1k-1.fc34.x86_64.rpm
-rpm -Uvh --force --nodeps openssl-libs-1.1.1k-1.fc34.x86_64.rpm
+
 mv RPM-GPG-KEY-rpmfusion-free-fedora-28 /etc/pki/rpm-gpg/
 dnf module --releasever=28 --setopt=module_platform_id=platform:f28 disable libgit2:0.26
 dnf module --releasever=28 --setopt=module_platform_id=platform:f28 enable libgit2:0.27
@@ -20,6 +19,9 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cu
 mv cuda-fedora33.repo /etc/yum.repos.d/
 yum install cuda nvidia-driver -y
 export PATH=/usr/local/cuda-11.3/bin:${PATH:+:${PATH}}
+wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/34/Everything/x86_64/os/Packages/o/openssl-libs-1.1.1k-1.fc34.x86_64.rpm
+rpm -Uvh --force --nodeps openssl-libs-1.1.1k-1.fc34.x86_64.rpm
+
 git clone https://github.com/c4pt000/ccminer
 cd ccminer
 sh autogen.sh
